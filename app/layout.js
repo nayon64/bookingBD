@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Nav from "./nav/page";
+import Nav from "./shared/nav/page";
+import Contact from "./shared/contact/page";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,8 +12,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="h-full p-6">
+    <html lang="en" className="h-full">
       <body className={inter.className}>
+        <Contact className="" />
         <Nav></Nav>
         {children}
       </body>
