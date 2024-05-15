@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Nav from "./shared/nav/page";
 import Contact from "./shared/contact/page";
+import  Footer from  "./shared/footer/page"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
         <Contact className="" />
         <Nav></Nav>
         {children}
+        <Footer/>
       </body>
     </html>
   );
