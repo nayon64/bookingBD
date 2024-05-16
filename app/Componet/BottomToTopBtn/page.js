@@ -3,7 +3,6 @@ const { useState, useEffect } = require("react");
 
 const BottomToTopBtn = () => {
 	const [scrollbarOpen, setScrollbarOpen] = useState(false);
-	console.log(scrollbarOpen);
   const scrollFunction = () => {
     if (
       document.body.scrollTop > 100 ||
