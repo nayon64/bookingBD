@@ -154,8 +154,6 @@ export default function Footer(props) {
                 <input
                   className="w-full text-sm  px-3 text-gray-700 outline-none rounded-md"
                   type="email"
-                  name=""
-                  id=""
                   placeholder="Email  Address "
                 />
                 <div className="py-2 px-3 rounded-md bg-green-800 hover:bg-white hover:text-green-800 duration-500 cursor-pointer">

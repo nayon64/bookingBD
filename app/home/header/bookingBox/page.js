@@ -16,7 +16,7 @@ function BookingBox(props) {
               type="text"
               name="price"
               id="price"
-              class="block text-gray-500 py-1.5 pl-7 pr-20  outline-none placeholder:text-gray-400 sm:text-sm sm:leading-6"
+              className="block text-gray-500 py-1.5 pl-7 pr-20  outline-none placeholder:text-gray-400 sm:text-sm sm:leading-6"
               placeholder="Where are you going?"
             />
           </div>
@@ -31,7 +31,7 @@ function BookingBox(props) {
               type="date"
               name="price"
               id="price"
-              class="block text-gray-500 py-1.5 pl-7 pr-20  outline-gray-500 placeholder:text-gray-400 sm:text-sm sm:leading-6"
+              className="block text-gray-500 py-1.5 pl-7 pr-20  outline-gray-500 placeholder:text-gray-400 sm:text-sm sm:leading-6"
               placeholder="Where are you going?"
             />
           </div>
@@ -48,7 +48,7 @@ function BookingBox(props) {
               type="date"
               name="price"
               id="price"
-              class="block text-gray-500 py-1.5 pl-7 pr-20  outline-gray-500 placeholder:text-gray-400 sm:text-sm sm:leading-6"
+              className="block text-gray-500 py-1.5 pl-7 pr-20  outline-gray-500 placeholder:text-gray-400 sm:text-sm sm:leading-6"
               placeholder="Where are you going?"
             />
           </div>
@@ -64,7 +64,7 @@ function BookingBox(props) {
                 type="number"
                 name="price"
                 id="price"
-                class=" text-gray-500 w-full py-1.5 pl-3 pr-4   outline-gray-500 placeholder:text-gray-400 sm:text-sm sm:leading-6"
+                className=" text-gray-500 w-full py-1.5 pl-3 pr-4   outline-gray-500 placeholder:text-gray-400 sm:text-sm sm:leading-6"
                 placeholder="Total Guest"
               />
             </div>

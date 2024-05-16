@@ -3,6 +3,7 @@ import "./globals.css";
 import Nav from "./shared/nav/page";
 import Contact from "./shared/contact/page";
 import  Footer from  "./shared/footer/page"
+import BottomToTopBtn from "./Componet/BottomToTopBtn/page";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +19,8 @@ export default function RootLayout({ children }) {
         <Contact className="" />
         <Nav></Nav>
         {children}
-        <Footer/>
+        <Footer />
+        <BottomToTopBtn/>
       </body>
     </html>
   );

@@ -31,3 +31,6 @@ body {
     text-wrap: balance;
   }
 }
+#btn-back-to-top{
+  position:fixed;
+}
