@@ -1,4 +1,5 @@
-"use client"
+
+import {Satisfy} from "next/font/google"
 import React from 'react';
 import CyclingImg from "../../assets/icon/cycling.png";
 import DeckImg from "../../assets/icon/deck.png";
@@ -41,16 +42,24 @@ const speacialSevice = [
   },
 ];
 
+const satisfy = Satisfy({ subsets: ["latin"], weight: "400" });
+
 function SpeacialService(props) {
-  console.log(speacialSevice)
   return (
-    <section className='flex justify-between items-center my-12 max-w-6xl mx-auto'>
+    <section className='flex justify-between items-center my-4 max-w-6xl mx-auto'>
+    
       {
         speacialSevice.map((e) => {
-          return (<div className='p-6 '>
-            <Image height={80} src={e.img} alt={e.name} />
-            <h6 className='text-center mt-4 font-semibold tracking-wider text-gray-700 '>{ e.name}</h6>
-          </div>)
+          return (
+            <div className="p-6 ">
+              <Image height={80} src={e.img} alt={e.name} />
+              <h6
+                className={`text-center mt-4 font-semibold tracking-wider text-gray-700 ${satisfy.className}`}
+              >
+                {e.name}
+              </h6>
+            </div>
+          );
         })
       }
    </section>
