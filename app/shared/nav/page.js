@@ -8,6 +8,7 @@ import ShoppingCard from "../../assets/icon/shopping-cart.png";
 import Home from "../../assets/icon/home.png";
 import PhotoCamera from "../../assets/icon/photo-camera-interface-symbol-for-button.png";
 import AboutBeach from "../../assets/icon/aboutBeach.png";
+import SummerBanner from "../../assets/picture/summerBanner.jpg"
 import { FaPhone } from "react-icons/fa6";
 import { MdEmail, MdHeadsetMic } from "react-icons/md";
 
@@ -37,11 +38,31 @@ const menus = [
       },
       {
         subTitle: "Popular  Hotel",
-        links: [
-          "Without Sidebar",
-          "Lift Sidebar",
-          "Right Sidebar",
-          "Hotel Details",
+        hotels: [
+          {
+            photo:
+              "https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            name: "Mandrake Hotel,",
+            address: "Macquarie, Sydney, NS",
+          },
+          {
+            photo:
+              " https://images.pexels.com/photos/261395/pexels-photo-261395.jpeg?auto=compress&cs=tinysrgb&w=600",
+            name: "Sal Panio Estate,,",
+            address: "Chico, CA - (530) 366-1659",
+          },
+          {
+            photo:
+              "https://images.pexels.com/photos/261169/pexels-photo-261169.jpeg?auto=compress&cs=tinysrgb&w=600",
+            name: "Symphony Maze",
+            address: "Bella Staduim Road, Brazil",
+          },
+          {
+            photo:
+              "https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg?auto=compress&cs=tinysrgb&w=600",
+            name: "1888 Hotel -by 8 Hotels",
+            address: "Chinatown, Potts",
+          },
         ],
       },
       {
@@ -290,6 +311,28 @@ const linksDef = (prop) => {
         </p>
       </div>
     );
+  } else if (prop.subTitle === "Popular  Hotel") {
+    return (
+      <div>
+        <h2 className="border-b-2 pb-2 mb-2 border-red-500 uppercase">
+          {prop.subTitle}
+        </h2>
+        <div className="flex  flex-col gap-3">{
+          prop.hotels && prop.hotels.map((h) => {
+            return (
+              <div className="flex gap-3">
+                <Image className="bg-cover bg-center" width={80} height={100} src={h.photo} alt="" />
+                <div className="">
+                  <h4 className="text-sm">{h.name}</h4>
+                  <p className="font-normal text-xs">{h.address}</p>
+
+                </div>
+              </div>
+            )
+          })
+        }</div>
+      </div>
+    );
   } else if (prop.subTitle === "Contact") {
     return (
       <div className="w-52">
@@ -360,7 +403,7 @@ const linksDef = (prop) => {
 
 export default function Nav() {
   return (
-    <nav className="bg-white">
+    <nav className="bg-white ">
       <div className="  text-sm flex items-center justify-between max-w-6xl mx-auto relative">
         <div className="font-bold">
           <span className="text-2xl">Booking </span>
@@ -374,19 +417,30 @@ export default function Nav() {
                   <Image className="w-3 h-3" src={m.icon} />
                   <p className="text-xs uppercase">{m.manue}</p>
                 </Link>
-                <div className="hidden group-hover:block hover:block">
+                <div
+                  className={`hidden group-hover:block hover:block absolute z-40 top-14  ${
+                    m.no > 3 ? "right-24" : "left-32"
+                  } border-t-2 border-blue-600 rounded-md shadow-md overflow-hidden bg-white`}
+                >
                   <div
-                    className={`${
-                      m.no > 3 ? "right-24" : "left-32"
-                    } absolute   bg-white text-gray-500 grid ${
+                    className={`  text-gray-500 grid ${
                       m.no == 1 || m.no == 7 ? "grid-cols-4" : "grid-cols-3"
-                    }  gap-6  top-14 z-10 p-4 border-t-2 border-blue-600 rounded-md shadow-md`}
+                    }  gap-6  p-6 `}
                   >
                     {m.subDetails &&
                       m.subDetails.map((e) => {
                         return linksDef(e);
                       })}
                   </div>
+                  {m.manue === "Home" && (
+                    <div className={`w-full h-36 mt-4`}>
+                      <Image
+                        className="object-center"
+                        src={SummerBanner}
+                        alt=""
+                      />
+                    </div>
+                  )}
                 </div>
               </li>
             );

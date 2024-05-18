@@ -12,7 +12,7 @@ export default function Header() {
       <section className="  overflow-hidden relative py-48 bg-black bg-opacity-40">
         <Image
           className="object-cover h-full absolute top-0 -z-10 w-screen"
-          src={Couple}
+          src={worldMap}
           alt="world map"
         ></Image>
         <div className="flex  flex-col items-center h-full justify-center">
